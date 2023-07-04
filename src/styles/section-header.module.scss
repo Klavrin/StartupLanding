@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .slogan {
+    color: #eba73d;
+    font-size: 16px;
+    font-weight: 500;
+    word-wrap: break-word;
+  }
+
+  .title {
+    color: #0f2137;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+  }
+
+  .titleVideoCall {
+    max-width: 580px;
+    color: #0f2137;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: -1px;
+  }
+
+  .description {
+    max-width: 623px;
+    color: #0f2137;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'DM Sans';
+    line-height: 35px;
+    margin-top: 15px;
+  }
+
+  .exploreDetails {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4f96ff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 42px;
+    margin-top: 10px;
+  }
+}

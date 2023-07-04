@@ -1,0 +1,147 @@
+$max-width: 1250px;
+$padding: 1rem;
+
+.blog {
+  background: #353448;
+}
+
+.container {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: $padding;
+  padding-block: 70px;
+}
+
+.blogPosts {
+  display: grid;
+  grid-template-columns: 350px 470px 350px;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 55px;
+
+  @media (max-width: calc($max-width + 16px)) {
+    grid-template-columns: 350px 350px;
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+    .post {
+      margin-inline: auto;
+    }
+  }
+
+  .post {
+    max-width: 350px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      justify-content: flex-end;
+
+      .postImage {
+        width: 350px;
+        height: 382px;
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      a {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+
+    &:nth-child(2) {
+      .postImage {
+        height: 500px;
+        margin-bottom: 30px;
+
+        @media (min-width: calc($max-width + 1rem)) {
+          min-width: 470px;
+        }
+
+        @media (max-width: calc($max-width + 1rem)) {
+          width: 350px;
+          height: 372px;
+        }
+      }
+
+      h4 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      justify-content: flex-start;
+
+      .postImage {
+        width: 350px;
+        height: 190px;
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+      }
+    }
+
+    &:last-child {
+      justify-content: flex-start;
+
+      .postImage {
+        width: 350px;
+        height: 190px;
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 30px;
+      }
+    }
+
+    a {
+      color: white;
+    }
+  }
+}

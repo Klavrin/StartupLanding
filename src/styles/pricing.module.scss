@@ -1,0 +1,170 @@
+$max-width: 1250px;
+$padding: 1rem;
+
+.container {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-block: 70px;
+  padding-inline: $padding;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+
+  .unorderedList {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+
+    @media (max-width: 950px) {
+      display: none;
+    }
+
+    .feature {
+      border-bottom: 1px solid;
+      padding-block: 12px;
+      color: #343d48;
+      font-size: 16px;
+      font-weight: 500;
+      border-color: #edf0f4;
+
+      display: flex;
+      justify-content: space-between;
+    }
+    .feature:last-child {
+      border: none;
+    }
+  }
+
+  .allPlans {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 48px;
+
+    .planContainer {
+      width: 230px;
+      height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid;
+      border-color: #edf0f4;
+      border-radius: 10px;
+      padding-block: 30px;
+
+      @media (max-width: 1150px) {
+        width: 180px;
+      }
+
+      @media (max-width: 950px) {
+        width: 100%;
+        flex: 0 0 100%;
+        min-width: 0;
+        cursor: grab;
+      }
+
+      .recommended {
+        width: 230px;
+        height: 35px;
+        border-radius: 8px 8px 0px 0px;
+        background: #52acff;
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 35px;
+        position: absolute;
+        transform: translateY(-65px);
+        z-index: -1;
+
+        @media (max-width: 1150px) {
+          width: 180px;
+        }
+
+        @media (max-width: 950px) {
+          width: 100%;
+        }
+      }
+
+      .plan {
+        margin-bottom: 25px;
+        color: rgba($color: #0f2137, $alpha: 0.5);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .pricing {
+        color: #0f2137;
+        text-align: center;
+        font-size: 26px;
+        font-family: DM Sans;
+        font-weight: 700;
+        letter-spacing: -0.55px;
+      }
+
+      .planIncludes {
+        width: 100%;
+        height: 220px;
+
+        .icon {
+          width: 100%;
+          border-bottom: 1px solid #edf0f4;
+          min-height: 48.7px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @media (max-width: 950px) {
+            justify-content: space-between;
+            padding-inline: $padding;
+          }
+
+          .responsiveFeature {
+            display: none;
+            color: #343d48;
+            font-size: 16px;
+            font-weight: 500;
+            border-color: #edf0f4;
+
+            @media (max-width: 950px) {
+              display: block;
+            }
+          }
+        }
+
+        .icon:last-child {
+          border: none;
+        }
+      }
+
+      .trial {
+        margin-top: 25px;
+        margin-bottom: 66px;
+        color: rgba($color: #0f213e, $alpha: 0.5);
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.carouselIndexContainer {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 0;
+  margin-top: 20px;
+
+  .carouselBulletPoint {
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+  }
+}

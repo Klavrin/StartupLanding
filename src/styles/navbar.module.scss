@@ -1,0 +1,138 @@
+$max-width: 1250px;
+$padding: 1rem;
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background: white;
+
+  .container {
+    width: $max-width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline: $padding;
+    margin-inline: auto;
+  }
+
+  @media (max-width: $max-width) {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+.image {
+  object-fit: contain;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 35px;
+
+  .link {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 33px;
+    color: #02073e;
+  }
+
+  .hamburgerIcon {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .link {
+      display: none;
+    }
+
+    .hamburgerIcon {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .button {
+    display: none;
+  }
+}
+
+.drawerContainer {
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .drawer {
+    display: none;
+    width: 100%;
+    max-width: 340px;
+    overflow: auto;
+    height: 100vh;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 21px;
+    animation: displayDrawer 0.5s ease;
+  }
+
+  @keyframes displayDrawer {
+    0% {
+      right: -1000px;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
+  .drawerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 30px;
+    margin-bottom: 20px;
+  }
+
+  .drawerInnerContainer {
+    height: 86%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .drawerButtonContainer {
+      width: 100%;
+      padding-inline: 30px;
+    }
+  }
+
+  .drawerLinksContainer {
+    list-style-type: none;
+    padding: 0;
+
+    .drawerLink {
+      border-top: 1px solid;
+      border-color: #e9edf5;
+      padding-left: 30px;
+      line-height: 44px;
+      font-size: 16px;
+
+      &:last-child {
+        border-bottom: 1px solid;
+        border-color: #e9edf5;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .drawer {
+      display: block;
+    }
+  }
+}

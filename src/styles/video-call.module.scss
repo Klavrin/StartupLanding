@@ -1,0 +1,18 @@
+$max-width: 1250px;
+$padding: 1rem;
+
+.container {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-block: 70px;
+  padding-inline: $padding;
+
+  .figure {
+    max-width: $max-width;
+
+    .image {
+      height: 100%;
+      margin-top: 17px;
+    }
+  }
+}

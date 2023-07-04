@@ -1,0 +1,33 @@
+// background colors
+$masthead-bg: linear-gradient(
+  180deg,
+  rgba(255, 254, 252, 0.5) 0%,
+  #fefaf5 100%
+);
+$dark-purple-bg: #353448;
+$dark-blue-bg: #183656;
+
+// text colors
+$masthead-primary: #02073e;
+$masthead-secondary: #343d48;
+$text-color-primary: #0f2137;
+$text-color-lightblue: #4f96ff;
+$text-color-yellow-primary: #eba73d;
+$text-color-yellow-secondary: #ffc059;
+
+// other colors
+$message-yellow: #fabf62;
+$btn-yellow: #eba73d;
+$recommended-lightblue: #52acff;
+
+.main {
+  $max-width: 1250px;
+  $padding: 1rem;
+
+  max-width: $max-width;
+  margin-inline: auto;
+
+  @media (max-width: $max-width) {
+    padding-inline: $padding;
+  }
+}
