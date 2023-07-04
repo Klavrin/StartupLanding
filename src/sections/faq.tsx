@@ -45,7 +45,7 @@ const Faq = () => {
     <section>
       <Element className={styles.container} name="Faq">
         <SectionHeader
-          slogan="Get yours question answer"
+          slogan="Get yours question answered"
           title="Frequently asked question"
         />
 
